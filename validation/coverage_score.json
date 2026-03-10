@@ -1,72 +1,67 @@
 {
-  "total_objects": 4,
-  "scored_objects": 4,
-  "overall_automation_percentage": 100.0,
-  "complexity_distribution": {
-    "low": 4,
-    "medium": 0,
-    "high": 0,
-    "very_high": 0
+  "report_id": "COV_PILOT_20260310",
+  "generated_at": "2026-03-10T21:24:10.158055",
+  "source_database": "pilot_testdb",
+  "target_warehouse": "databricks",
+  "overall_coverage": 100.0,
+  "tables": {
+    "total": 4,
+    "migrated": 4,
+    "skipped": 0,
+    "coverage": 100.0,
+    "details": [
+      "customers",
+      "orders",
+      "products",
+      "order_items"
+    ]
   },
-  "total_estimated_review_hours": 0.1,
-  "summary_by_construct": {},
-  "generated_at": "2026-03-10T17:24:44.949797",
-  "objects": [
-    {
-      "object_name": "customers",
-      "object_type": "table",
-      "total_constructs": 0,
-      "automation_percentage": 100.0,
-      "complexity_level": "low",
-      "estimated_review_minutes": 2,
-      "auto_convertible": [
-        "TABLE_SCHEMA"
-      ],
-      "needs_review": [],
-      "excluded": [],
-      "recommendations": []
-    },
-    {
-      "object_name": "order_items",
-      "object_type": "table",
-      "total_constructs": 0,
-      "automation_percentage": 100.0,
-      "complexity_level": "low",
-      "estimated_review_minutes": 2,
-      "auto_convertible": [
-        "TABLE_SCHEMA"
-      ],
-      "needs_review": [],
-      "excluded": [],
-      "recommendations": []
-    },
-    {
-      "object_name": "orders",
-      "object_type": "table",
-      "total_constructs": 0,
-      "automation_percentage": 100.0,
-      "complexity_level": "low",
-      "estimated_review_minutes": 2,
-      "auto_convertible": [
-        "TABLE_SCHEMA"
-      ],
-      "needs_review": [],
-      "excluded": [],
-      "recommendations": []
-    },
-    {
-      "object_name": "products",
-      "object_type": "table",
-      "total_constructs": 0,
-      "automation_percentage": 100.0,
-      "complexity_level": "low",
-      "estimated_review_minutes": 2,
-      "auto_convertible": [
-        "TABLE_SCHEMA"
-      ],
-      "needs_review": [],
-      "excluded": [],
-      "recommendations": []
-    }
-  ]
+  "stored_procedures": {
+    "total": 4,
+    "translated": 4,
+    "skipped": 0,
+    "coverage": 100.0,
+    "details": [
+      {
+        "name": "sp_SalesByRegion",
+        "model": "proc_salesbyregion",
+        "status": "translated"
+      },
+      {
+        "name": "sp_GetActiveProducts",
+        "model": "proc_getactiveproducts",
+        "status": "translated"
+      },
+      {
+        "name": "sp_CustomerOrderSummary",
+        "model": "proc_customerordersummary",
+        "status": "translated"
+      },
+      {
+        "name": "sp_GetCustomerById",
+        "model": "proc_getcustomerbyid",
+        "status": "translated"
+      }
+    ]
+  },
+  "columns": {
+    "total": 31,
+    "migrated": 31,
+    "coverage": 100.0
+  },
+  "dialect_translations": {
+    "total": 5,
+    "applied": 5,
+    "patterns": [
+      "ISNULL->COALESCE",
+      "BIT->BOOLEAN",
+      "concat +->||",
+      "GETDATE->CURRENT_TIMESTAMP",
+      "DATEADD->DATE_ADD"
+    ]
+  },
+  "data_quality": {
+    "purity_score": 100.0,
+    "findings": 0
+  }
 }

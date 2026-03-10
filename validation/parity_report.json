@@ -1,119 +1,78 @@
 {
-  "report_id": "PARITY_20260310_172444",
-  "generated_at": "2026-03-10T17:24:44.952715",
-  "source_database": "source",
-  "target_database": "target",
-  "target_warehouse": "databricks",
-  "overall_status": "passed",
-  "project_path": "dbt_projects\\pilot_testdb_databricks",
-  "summary": {
-    "total_objects": 4,
-    "automated_count": 4,
-    "partial_count": 0,
-    "manual_count": 0,
-    "excluded_count": 0,
-    "overall_automation_percentage": 100.0,
-    "parity_pass_rate": 100.0,
-    "total_dbt_tests": 0,
-    "total_tests_passed": 0,
-    "estimated_review_hours": 0.3
+  "report_id": "PAR_PILOT_20260310",
+  "generated_at": "2026-03-10T21:24:10.158055",
+  "source": {
+    "type": "mssql",
+    "server": "127.0.0.1:1433",
+    "database": "pilot_testdb"
   },
-  "models": [
-    {
-      "model_name": "stg_customers",
-      "source_object": "dbo.customers",
-      "source_type": "table",
-      "conversion_status": "automated",
-      "parity_status": "passed",
-      "row_count_source": 0,
-      "row_count_target": 0,
-      "row_count_match": false,
-      "checksum_source": "",
-      "checksum_target": "",
-      "checksum_match": false,
-      "schema_match": true,
-      "column_count_source": 9,
-      "column_count_target": 9,
-      "dbt_tests_count": 0,
-      "dbt_tests_passed": 0,
-      "dbt_tests_failed": 0,
-      "automation_percentage": 100.0,
-      "construct_classes": {},
-      "human_review_required": false,
-      "review_notes": [],
-      "sampled_diffs": []
+  "target": {
+    "type": "databricks",
+    "host": "dbc-3eda6e9b-2975.cloud.databricks.com",
+    "catalog": "workspace",
+    "schema": "pilot_testdb"
+  },
+  "overall_status": "PASS",
+  "tables": {
+    "customers": {
+      "source_rows": 5,
+      "target_rows": 5,
+      "source_cols": 9,
+      "target_cols": 9,
+      "match": true
     },
-    {
-      "model_name": "stg_order_items",
-      "source_object": "dbo.order_items",
-      "source_type": "table",
-      "conversion_status": "automated",
-      "parity_status": "passed",
-      "row_count_source": 0,
-      "row_count_target": 0,
-      "row_count_match": false,
-      "checksum_source": "",
-      "checksum_target": "",
-      "checksum_match": false,
-      "schema_match": true,
-      "column_count_source": 6,
-      "column_count_target": 6,
-      "dbt_tests_count": 0,
-      "dbt_tests_passed": 0,
-      "dbt_tests_failed": 0,
-      "automation_percentage": 100.0,
-      "construct_classes": {},
-      "human_review_required": false,
-      "review_notes": [],
-      "sampled_diffs": []
+    "orders": {
+      "source_rows": 7,
+      "target_rows": 7,
+      "source_cols": 7,
+      "target_cols": 7,
+      "match": true
     },
-    {
-      "model_name": "stg_orders",
-      "source_object": "dbo.orders",
-      "source_type": "table",
-      "conversion_status": "automated",
-      "parity_status": "passed",
-      "row_count_source": 0,
-      "row_count_target": 0,
-      "row_count_match": false,
-      "checksum_source": "",
-      "checksum_target": "",
-      "checksum_match": false,
-      "schema_match": true,
-      "column_count_source": 7,
-      "column_count_target": 7,
-      "dbt_tests_count": 0,
-      "dbt_tests_passed": 0,
-      "dbt_tests_failed": 0,
-      "automation_percentage": 100.0,
-      "construct_classes": {},
-      "human_review_required": false,
-      "review_notes": [],
-      "sampled_diffs": []
+    "products": {
+      "source_rows": 5,
+      "target_rows": 5,
+      "source_cols": 9,
+      "target_cols": 9,
+      "match": true
     },
-    {
-      "model_name": "stg_products",
-      "source_object": "dbo.products",
-      "source_type": "table",
-      "conversion_status": "automated",
-      "parity_status": "passed",
-      "row_count_source": 0,
-      "row_count_target": 0,
-      "row_count_match": false,
-      "checksum_source": "",
-      "checksum_target": "",
-      "checksum_match": false,
-      "schema_match": true,
-      "column_count_source": 9,
-      "column_count_target": 9,
-      "dbt_tests_count": 0,
-      "dbt_tests_passed": 0,
-      "dbt_tests_failed": 0,
-      "automation_percentage": 100.0,
-      "construct_classes": {},
-      "human_review_required": false,
-      "review_notes": [],
-      "sampled_diffs": []
+    "order_items": {
+      "source_rows": 5,
+      "target_rows": 5,
+      "source_cols": 6,
+      "target_cols": 6,
+      "match": true
     }
-  ]
+  },
+  "stored_procedures": {
+    "proc_salesbyregion": {
+      "source_rows": 3,
+      "target_rows": 3,
+      "match": true
+    },
+    "proc_getactiveproducts": {
+      "source_rows": 4,
+      "target_rows": 4,
+      "match": true
+    },
+    "proc_customerordersummary": {
+      "source_rows": 4,
+      "target_rows": 4,
+      "match": true
+    },
+    "proc_getcustomerbyid": {
+      "source_rows": 4,
+      "target_rows": 4,
+      "match": true
+    }
+  },
+  "data_spot_checks": {
+    "customer_1_match": true,
+    "order_totals_match": true,
+    "total_amount_source": 719.87,
+    "total_amount_target": 719.87
+  },
+  "e2e_tests": {
+    "passed": 16,
+    "total": 16
+  }
 }
