@@ -1,0 +1,13 @@
+[0m17:24:52.800277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D2941F8C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D25D14080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D272BD310>]}
+
+
+============================== 17:24:52.803620 | 1cc90c36-c462-4e44-b5cf-69ea5a449965 ==============================
+[0m17:24:52.803620 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:24:52.812559 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\gag_a\\Desktop\\AI-Agent-MSSQL-DBT\\dbt_projects\\pilot_testdb_databricks', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test --no-print', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\gag_a\\Desktop\\AI-Agent-MSSQL-DBT\\dbt_projects\\pilot_testdb_databricks\\logs'}
+[0m17:24:52.826347 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DATABRICKS_HOST'
+[0m17:24:52.830479 [debug] [MainThread]: Command `dbt test` failed at 17:24:52.830479 after 0.66 seconds
+[0m17:24:52.830479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D293E60F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D29FE17C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D29B6B560>]}
+[0m17:24:52.832509 [debug] [MainThread]: Flushing usage events
+[0m17:24:54.484759 [debug] [MainThread]: An error was encountered while trying to flush usage events

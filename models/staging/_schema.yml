@@ -1,0 +1,10 @@
+version: 2
+models:
+- name: stg_customers
+  description: Staging model for customers
+- name: stg_order_items
+  description: Staging model for order_items
+- name: stg_orders
+  description: Staging model for orders
+- name: stg_products
+  description: Staging model for products

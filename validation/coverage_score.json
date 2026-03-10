@@ -1,0 +1,72 @@
+{
+  "total_objects": 4,
+  "scored_objects": 4,
+  "overall_automation_percentage": 100.0,
+  "complexity_distribution": {
+    "low": 4,
+    "medium": 0,
+    "high": 0,
+    "very_high": 0
+  },
+  "total_estimated_review_hours": 0.1,
+  "summary_by_construct": {},
+  "generated_at": "2026-03-10T17:24:44.949797",
+  "objects": [
+    {
+      "object_name": "customers",
+      "object_type": "table",
+      "total_constructs": 0,
+      "automation_percentage": 100.0,
+      "complexity_level": "low",
+      "estimated_review_minutes": 2,
+      "auto_convertible": [
+        "TABLE_SCHEMA"
+      ],
+      "needs_review": [],
+      "excluded": [],
+      "recommendations": []
+    },
+    {
+      "object_name": "order_items",
+      "object_type": "table",
+      "total_constructs": 0,
+      "automation_percentage": 100.0,
+      "complexity_level": "low",
+      "estimated_review_minutes": 2,
+      "auto_convertible": [
+        "TABLE_SCHEMA"
+      ],
+      "needs_review": [],
+      "excluded": [],
+      "recommendations": []
+    },
+    {
+      "object_name": "orders",
+      "object_type": "table",
+      "total_constructs": 0,
+      "automation_percentage": 100.0,
+      "complexity_level": "low",
+      "estimated_review_minutes": 2,
+      "auto_convertible": [
+        "TABLE_SCHEMA"
+      ],
+      "needs_review": [],
+      "excluded": [],
+      "recommendations": []
+    },
+    {
+      "object_name": "products",
+      "object_type": "table",
+      "total_constructs": 0,
+      "automation_percentage": 100.0,
+      "complexity_level": "low",
+      "estimated_review_minutes": 2,
+      "auto_convertible": [
+        "TABLE_SCHEMA"
+      ],
+      "needs_review": [],
+      "excluded": [],
+      "recommendations": []
+    }
+  ]
+}

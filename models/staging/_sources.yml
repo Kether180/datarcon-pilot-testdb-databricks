@@ -1,0 +1,81 @@
+version: 2
+sources:
+- name: mssql_source
+  description: 'MSSQL source database: mssql_database'
+  database: '{{ env_var("SOURCE_DATABASE", "raw") }}'
+  schema: '{{ env_var("SOURCE_SCHEMA", "mssql") }}'
+  tables:
+  - name: customers
+    description: 'Source table: customers'
+    columns:
+    - name: customer_id
+      description: Column customer_id (int)
+    - name: first_name
+      description: Column first_name (varchar)
+    - name: last_name
+      description: Column last_name (varchar)
+    - name: email
+      description: Column email (varchar)
+    - name: phone
+      description: Column phone (varchar)
+    - name: region
+      description: Column region (varchar)
+    - name: is_active
+      description: Column is_active (bit)
+    - name: created_at
+      description: Column created_at (datetime)
+    - name: updated_at
+      description: Column updated_at (datetime)
+  - name: order_items
+    description: 'Source table: order_items'
+    columns:
+    - name: item_id
+      description: Column item_id (int)
+    - name: order_id
+      description: Column order_id (int)
+    - name: product_id
+      description: Column product_id (int)
+    - name: quantity
+      description: Column quantity (int)
+    - name: unit_price
+      description: Column unit_price (decimal)
+    - name: line_total
+      description: Column line_total (decimal)
+  - name: orders
+    description: 'Source table: orders'
+    columns:
+    - name: order_id
+      description: Column order_id (int)
+    - name: customer_id
+      description: Column customer_id (int)
+    - name: order_date
+      description: Column order_date (date)
+    - name: total_amount
+      description: Column total_amount (decimal)
+    - name: status
+      description: Column status (varchar)
+    - name: region
+      description: Column region (varchar)
+    - name: created_at
+      description: Column created_at (datetime)
+  - name: products
+    description: 'Source table: products'
+    columns:
+    - name: product_id
+      description: Column product_id (int)
+    - name: name
+      description: Column name (varchar)
+    - name: sku
+      description: Column sku (varchar)
+    - name: category
+      description: Column category (varchar)
+    - name: price
+      description: Column price (decimal)
+    - name: stock_quantity
+      description: Column stock_quantity (int)
+    - name: reorder_level
+      description: Column reorder_level (int)
+    - name: is_active
+      description: Column is_active (bit)
+    - name: created_at
+      description: Column created_at (datetime)
