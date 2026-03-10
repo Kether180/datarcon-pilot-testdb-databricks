@@ -2,8 +2,8 @@ version: 2
 sources:
 - name: mssql_source
   description: 'MSSQL source database: mssql_database'
-  database: '{{ env_var("SOURCE_DATABASE", "raw") }}'
-  schema: '{{ env_var("SOURCE_SCHEMA", "mssql") }}'
+  database: workspace
+  schema: pilot_testdb
   tables:
   - name: customers
     description: 'Source table: customers'

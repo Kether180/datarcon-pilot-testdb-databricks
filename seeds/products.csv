@@ -1,0 +1,6 @@
+product_id,name,sku,category,price,stock_quantity,reorder_level,is_active,created_at
+1,Widget A,WGT-001,Electronics,29.99,100,10,True,2026-03-10T19:48:50.953000
+2,Widget B,WGT-002,Electronics,49.99,50,5,True,2026-03-10T19:48:50.953000
+3,Gadget C,GDG-001,Hardware,99.99,30,8,True,2026-03-10T19:48:50.953000
+4,Tool D,TL-001,Tools,19.99,200,20,True,2026-03-10T19:48:50.953000
+5,Part E,PRT-001,Parts,9.99,500,50,False,2026-03-10T19:48:50.953000

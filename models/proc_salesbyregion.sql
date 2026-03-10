@@ -8,16 +8,13 @@
     schema='procedures'
 ) }}
 
-IF DATEADD(YEAR, -1, CURRENT_TIMESTAMP()) IS NULL 
-    IF CURRENT_TIMESTAMP() IS NULL 
-
-    SELECT
-        region,
-        COUNT(order_id) AS order_count,
-        SUM(total_amount) AS total_sales,
-        AVG(total_amount) AS avg_order_value
-    FROM {{ ref('stg_orders') }}
-    WHERE order_date BETWEEN DATEADD(YEAR, -1, CURRENT_TIMESTAMP()) AND CURRENT_TIMESTAMP()
-        AND status IN ('completed', 'shipped')
-    GROUP BY region
-    ORDER BY total_sales DESC
+SELECT
+    region,
+    COUNT(order_id) AS order_count,
+    SUM(total_amount) AS total_sales,
+    AVG(total_amount) AS avg_order_value
+FROM {{ ref('stg_orders') }}
+WHERE order_date BETWEEN DATE_ADD(CURRENT_DATE(), -365) AND CURRENT_DATE()
+    AND status IN ('completed', 'shipped')
+GROUP BY region
+ORDER BY total_sales DESC

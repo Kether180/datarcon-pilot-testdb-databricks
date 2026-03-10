@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,phone,region,is_active,created_at,updated_at
+1,John,Doe,john@example.com,555-0101,North,True,2026-03-10T19:48:50.950000,2026-03-10T19:48:50.950000
+2,Jane,Smith,jane@example.com,555-0102,South,True,2026-03-10T19:48:50.950000,2026-03-10T19:48:50.950000
+3,Bob,Wilson,bob@example.com,555-0103,East,True,2026-03-10T19:48:50.950000,2026-03-10T19:48:50.950000
+4,Alice,Brown,alice@example.com,555-0104,West,False,2026-03-10T19:48:50.950000,2026-03-10T19:48:50.950000
+5,Charlie,Davis,charlie@example.com,555-0105,North,True,2026-03-10T19:48:50.950000,2026-03-10T19:48:50.950000
